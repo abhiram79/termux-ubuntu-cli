@@ -1,2 +1,8 @@
-# termux-ubuntu-cli
-Run CLI version of ubuntu in Termux
+# Termux Ubuntu CLI
+- Command Line Interface of Ubuntu in Termux
+
+### installation
+
+```bash
+
+```
