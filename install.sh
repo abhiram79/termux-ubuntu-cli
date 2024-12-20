@@ -12,11 +12,7 @@ clear
 printf ${Y}"UBUNTU CLI - TERMUX"${W}
 printf ${Y}"github.com/abhiram79"${W}
 }
-
-
-
 CHROOT=$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu
-
 install_ubuntu(){
 echo
 if [[ -d "$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu" ]]; then
@@ -29,9 +25,6 @@ pkg install proot-distro
 proot-distro install ubuntu
 fi
 }
-
-
-
 adding_user(){
 echo ${G}"Setting User."${W}
 cat > $CHROOT/root/.bashrc <<- EOF
@@ -49,9 +42,6 @@ echo "proot-distro login --user ubuntu ubuntu" >> $PREFIX/bin/ubuntu
 chmod +x $PREFIX/bin/ubuntu
 rm $CHROOT/root/.bashrc
 }
-
-
-
 final_banner(){
 banner
 echo
@@ -63,7 +53,6 @@ echo "ubuntu  -  default ubuntu password"
 echo
 rm -rf ~/install.sh
 }
-
 banner
 install_ubuntu
 adding_user
