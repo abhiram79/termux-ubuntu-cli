@@ -27,6 +27,8 @@ fi
 
 echo ${G}"Setting User."${W}
 cat > $CHROOT/root/.bashrc <<- EOF
+apt update
+sleep 4
 apt-get install sudo wget -y
 sleep 2
 useradd -m -s /bin/bash ubuntu
